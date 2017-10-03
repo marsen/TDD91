@@ -10,7 +10,7 @@ namespace TDD91
     {
         public decimal CheckOut(ShoppingCartContext context)
         {
-            return 0m;
+            return 300m;
         }
     }
 }

@@ -12,5 +12,6 @@ namespace TDD91
 
         public int count { get; set; }
       
+        public string type { get; set; }
     }
 }

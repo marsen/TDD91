@@ -20,6 +20,7 @@ namespace TDD91.Tests
             var context = new ShoppingCartContext();
             context.totalPrice = 500;
             context.count = 1;
+            context.type = "TotalPrice";
             //// Act
             var actual = target.CheckOut(context);
             //// Assert
@@ -36,6 +37,8 @@ namespace TDD91.Tests
             var context = new ShoppingCartContext();
             context.totalPrice = 600;
             context.count = 4;
+            context.type = "TotalQty";
+
             //// Act
             var actual = target.CheckOut(context);
             //// Assert

@@ -10,7 +10,15 @@ namespace TDD91
     {
         public decimal CheckOut(ShoppingCartContext context)
         {
-            return 300m;
+            if (context.totalPrice >= 500)
+            {
+                context.totalPrice = context.totalPrice - 200;
+            }
+            if (context.count >= 3)
+            {
+                context.totalPrice = context.totalPrice * 0.8m;
+            }
+            return context.totalPrice;
         }
     }
 }

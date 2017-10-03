@@ -9,5 +9,8 @@ namespace TDD91
     public class ShoppingCartContext
     {
         public decimal totalPrice { get; set; }
+
+        public int count { get; set; }
+      
     }
 }

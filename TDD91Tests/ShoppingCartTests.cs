@@ -44,5 +44,25 @@ namespace TDD91.Tests
             //// Assert
             Assert.Equal(excepted, actual);
         }
+
+        [Fact]
+        public void TotalPrice_600_TotalQty_4_TypeIsTotalQty_TCheckout_480()
+        {
+            //// Arrange 
+            var excepted = 480;
+            var target = new ShoppingCart();
+            var context = new ShoppingCartContext();
+            context.totalPrice = 600;
+            context.count = 4;
+            context.type = "TotalQty";
+
+            //// Act
+            var actual = target.CheckOut(context);
+
+            //// Assert
+            Assert.Equal(excepted, actual);
+        }
+
+
     }
 }
